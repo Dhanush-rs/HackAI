@@ -37,7 +37,7 @@ def preprocess_wav(fpath_or_wav: Union[str, Path, np.ndarray],
     else:
         wav = fpath_or_wav
     
-    Resample the wav if needed
+    # Resample the wav if needed
     if source_sr is not None and source_sr != sampling_rate:
         wav = librosa.resample(wav, orig_sr=source_sr, target_sr=sampling_rate)
         
